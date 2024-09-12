@@ -18,14 +18,17 @@
     --fondoTexto:#e8c7ff;
     --fondoOscuro:#0f011e;
 
+    /* tipografía */
+    --letraFamily: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+
 }
 
 /* selector {  propiedades: valor; } */
 
-body {
+bbody {
     margin: 0;
     padding: 0;
-    font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--letraFamily);
     background: rgb(0,212,255);
     background: linear-gradient(180deg, rgba(0,212,255,0.19931722689075626) 18%, rgba(5,66,148,0.8575805322128851) 62%);
 }
@@ -127,4 +130,104 @@ a{
 }
 
 
+/* box model - modelo de caja */
 
+/* margin - padding */
+
+b{
+    margin: 10px; /* todos los bordes */
+    margin-top: 15px; /* el lado puntual */
+    margin-right: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin: 10px 15px; /* top/bottom   right/left */
+    margin: 10px 15px 20px; /* top   right/left  bottom */
+    margin: 10px 15px 20px 25px; /* top   right bottom  left */
+
+    padding: 10px; /* todos los bordes */
+    padding-top: 15px; /* el lado puntual */
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding: 10px 15px; /* top/bottom   right/left */
+    padding: 10px 15px 20px; /* top   right/left  bottom */
+    padding: 10px 15px 20px 25px; /* top   right bottom  left */
+
+    border: 1px; /* todos los bordes */
+    border-top: 2px; /* el lado puntual */
+    border-right: 2px;
+    border-bottom: 2px;
+    border-left: 2px;
+    border: 1px 2px; /* top/bottom   right/left */
+    border: 1px 2px 3px; /* top   right/left  bottom */
+    border: 1px 2px 3px 2px; /* top   right bottom  left */
+    border: 1px solid var(--violeta);
+
+    border-color: #452389;
+    border-width: 2px;
+    border-style: dotted;
+
+    border-color: #452389 red blue;
+    border-width: 2px 3px 1px 2px;
+    border-style: dotted solid solid;
+
+    box-sizing: border-box; /* box model es  un bloque */  
+}
+
+/* display */
+
+/* block inline inline-block none flex grid table */
+
+.b1 {
+    display: none;
+}
+
+.b2{
+    visibility: hidden;
+}
+
+.box{
+    width: 300px;
+    height: 300px;
+    border: 2px solid var(--fondoOscuro);
+    opacity: 90%;
+    position: absolute;
+}
+
+.texto {
+    font-size: 3rem;
+    color: var(--fondoOscuro);
+    text-align: center;
+    padding: 20px;
+}
+
+.z1{
+    background-color: #e8c7ff;
+    left: 0;
+    top: 0;
+    z-index: 20;    
+}
+
+.z2{
+    background-color: #6c3097;
+    left: 80px;
+    top: 80px;
+    z-index: 10; 
+}
+
+.z3{
+    background-color: #281039;
+    left: 160px;
+    top: 160px;
+    z-index: 0;
+}
+
+#pposicionamiento{
+    position: fixed;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    background-color: #281039;
+}
