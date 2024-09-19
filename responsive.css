@@ -1,0 +1,157 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Roboto;
+}
+
+h1{
+    font-size: 3vw;
+}
+
+div{
+    background-color: red;
+    padding: 10px;
+    color: aliceblue;
+}
+
+p{
+    font-size: 2vw;
+    margin: 10px;
+}
+.pepe{
+
+}
+
+
+@media screen and (min-width: 600px) and (max-width: 900px){
+    
+}
+
+@media screen and (min-width: 901px){
+    div{
+        background-color: darkgreen;
+        font-size: 2.5vw;
+    }   
+
+}
+
+@media screen and (min-width: 1000px){
+    div{
+        background-color: rgb(12, 23, 227);
+        font-size: 3vw;
+    }  
+}
+
+@media screen and (min-width: 1001px){
+    div{
+        background-color: white;
+        color: black;
+        font-size: 3vw;      
+    }  
+
+    p:last-child{
+        display: none;
+    }
+
+    h1{
+        background-color: black;
+        color: blanchedalmond;
+        font-size: 3.5vw;
+        text-align: center;
+        padding: 50px;
+    }
+}   
+
+/*******************************************************************/
+#animaciones{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    animation-name: cambiarColor;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+
+    @keyframes cambiarColor {
+        0% {background: red; width: 200px;}
+        /* Primer fotograma */
+        50% {background: yellow; width: 400px;}
+        /* Segundo fotograma */
+        100% {background: green; width: 600px;}
+        /* Último fotograma */
+    }
+    
+}
+
+#animaciones:hover{
+    /*transform: translate(20px, -30px);
+    transform: scale(2, 6);
+    transform: rotate(20deg);
+    transform: rotate(5deg) scale(2,2) translate(20px, 40px);
+    transition: all 0.2s ease-in;*/
+}
+
+.chain-animation {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    animation: moveRight 3s ease-in-out, fadeOut 5s ease 3s;
+    animation-iteration-count: infinite;
+
+  }
+
+  @keyframes moveRight {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(500px); }
+  }
+
+  @keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+
+  .rotate-fade {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    animation: rotateFade 5s infinite;
+  }
+
+  @keyframes rotateFade {
+    0% { transform: rotate(0deg); opacity: 1; }
+    50% { transform: rotate(180deg); opacity: 0.5; }
+    100% { transform: rotate(360deg); opacity: 1; }
+  }
+
+
+  .move-scale {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    animation: moveScale 4s ease-in-out infinite;
+  }
+
+  @keyframes moveScale {
+    0% { transform: translateX(0) scale(1); }
+    50% { transform: translateX(200px) scale(1.5); }
+    100% { transform: translateX(0) scale(1); }
+  }
+
+
+  .color-change {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation: changeColor 5s linear;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes changeColor {
+    from { background-color: red; }
+    to { background-color: blue; }
+  }
